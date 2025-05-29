@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizFinder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav id="navbar">
+                <div class="logo">BizFinder</div>
+                <div class="search-box">
+                    <span class="icon"><i class="fas fa-search"></i></span>
+                    <input type="text" id="searchInput" placeholder="Search business">
+                    <button onclick="search()">Search</button>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div id="menu" class="menu">
+                    <button class="close-btn" onclick="toggleMenu()">×</button>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Business Categories</a></li>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+    </header>
+
+    <section class="hero">
+        <ul class="background-shapes">
+            <li></li><li></li><li></li><li></li><li></li>
+        </ul>
+        <div class="hero-content">
+            <h2 class="animated-heading">
+                Transform the Way You Discover Local Businesses - Unlock Cameroon's Best Services, Tailored Just for You!
+            </h2>
+            <p class="fade-in-text">
+                Discover a world of trusted local businesses in Cameroon, from essential services to unique finds. Whether you are looking for quality, convenience, or innovation, BizFinder brings the best right to your fingertips!
+            </p>
+            <div class="hero-buttons">
+                <button class="btn">Explore Now</button>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id ="business-section">
+        <h2 class="section-title">Explore Our Business Categories</h2>
+        <div class="category-wrapper">
+      
+          <div class="category-card" data-category="building">
+            <i class="fas fa-hard-hat category-icon"></i>
+            Building & Construction
+          </div>
+      
+          <div class="category-card" data-category="food">
+            <i class="fas fa-utensils category-icon"></i>
+            Food & Restaurants
+          </div>
+      
+          <div class="category-card" data-category="auto">
+            <i class="fas fa-car category-icon"></i>
+            Auto Services
+          </div>
+      
+          <div class="category-card" data-category="fashion">
+            <i class="fas fa-tshirt category-icon"></i>
+            Fashion & Tailoring
+          </div>
+      
+          <div class="category-card" data-category="saloon">
+            <i class="fas fa-spa category-icon"></i>
+            Salons & Beauty
+          </div>
+      
+          <div class="category-card" data-category="ict">
+            <i class="fas fa-laptop-code category-icon"></i>
+            ICT & Education
+          </div>
+      
+          <div class="category-card" data-category="events">
+            <i class="fas fa-birthday-cake category-icon"></i>
+            Events & Rentals
+          </div>
+      
+          <div class="category-card" data-category="agriculture">
+            <i class="fas fa-tractor category-icon"></i>
+            Agriculture & Farming
+          </div>
+      
+          <div class="category-card" data-category="health">
+            <i class="fas fa-heartbeat category-icon"></i>
+            Health & Wellness
+          </div>
+      
+          <div class="category-card" data-category="electronics">
+            <i class="fas fa-mobile-alt category-icon"></i>
+            Electronics & Phones
+          </div>
+      
+        </div>
+        <!-- Subcategory container -->
+<div id="subcategory" class="hidden bg-white p-6 rounded-lg shadow-md mt-6">
+  <h2 id="subcategory-title" class="text-2xl font-bold text-gray-800 mb-4 ">Businesses in this category</h2>
+  <div id="subcategory-list"></div>
+</div>
+
+<!-- Business Detail container -->
+<div id="business-detail" style="display: none;">
+  <h2 id="detail-name"></h2>
+  <p> <span id="detail-description"></span></p>
+  <p><strong>Services:</strong> <span id="detail-services"></span></p>
+  <p><strong>Contact:</strong> <span id="detail-contact"></span></p>
+  <p><strong>Location:</strong> <span id="detail-location"></span></p>
+  <p><strong>Website:</strong> <a href="#" id="detail-website" target="_blank">Visit Website</a></p>
+  <button onclick="closeDetail()">Close</button>
+</div>
+<div id="map" style="height: 300px; display: none; margin-top: 10px;">
+   
+</div>
+      </section>
+      <script src="main.js"></script>
+</body>
+</html>
+
